@@ -1,0 +1,164 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+body {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  overflow-y: auto;
+  font-size: 16px;
+  font-family: "Sora", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(0, 0%, 7%);
+}
+
+.header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-left {
+  margin-top: -8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: hsl(240, 1%, 59%);
+}
+
+.personal-best {
+  color: hsl(0, 0%, 100%);  
+}
+
+.typing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.setting-bar {
+  height: 40px;
+  padding: 1.5rem;
+  width: 95%;
+  color: hsl(240, 1%, 59%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(240, 3%, 46%);
+}
+
+.stats-div {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.stats-div div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+} 
+
+.stats-div p {
+  display: inline;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.separator-verctical {
+  height: 20px;
+  width: 1px;
+  background-color: hsl(240, 3%, 46%);
+}
+
+.stats-right {
+  gap: 20px;
+  align-items: center;
+  display: flex;
+}
+
+.stats-right div {
+  gap: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.setting-bar button {
+  cursor: pointer;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;  
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 7%);
+  border-radius: 5px;
+  font-family: "Sora", sans-serif;
+  border: 1px solid hsl(240, 3%, 46%);
+}
+
+.setting-bar button.blue-selected {
+  border: 1px solid hsl(210, 100%, 65%);
+  color: hsl(210, 100%, 65%);
+}
+
+.content {
+  line-height: 1.9;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  font-weight: 400; 
+}
+
+.type-content {
+  position: relative; /* Required for the absolute overlay to position correctly */
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 800px;
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.start-btn {
+  background-color: hsl(228, 74%, 61%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.overlay-text {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none !important;
+}

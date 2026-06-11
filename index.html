@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="src/script.js" defer></script>
+  <title>Frontend Mentor | Typing Speed Test</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-right">
+      <img src="assets/images/logo-large.svg" >
+    </div>
+    <div class="header-left"><img src="assets/images/icon-personal-best.svg"> Personal best: <p class="personal-best">0 WPM</p></div>
+  </div>
+
+  <div class="typing-container">
+    <div class="setting-bar">
+      <div class="stats-div">
+        <div class="WPM-div"> WPM: <p class="WPM">0</p></div>
+        <div class="separator-verctical"></div>
+        <div class="accuracy-div"> Accuracy: <p class="accuracy">100%</p></div>
+        <div class="separator-verctical"></div>
+        <div class="time-div"> Time: <p class="time">0:60</p></div>
+      </div>
+      <div class="stats-right">
+        <div class="difficulty-div">
+          <p>Difficulty: </p>
+          <button class="difficulty-btn" id="easy-btn">Easy</button>
+          <button class="difficulty-btn" id="medium-btn">Medium</button>
+          <button class="difficulty-btn" id="hard-btn">Hard</button>
+        </div>
+        <div class="separator-verctical"></div>
+        <div class="mode-div">
+          <p>Mode: </p>
+          <button class="mode-btn" id="time-mode-btn">Timed(60s)</button>
+          <button class="mode-btn" id="word-mode-btn">Passage</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="type-content">
+      <div class="type-content-div">
+        <p class="content">
+          Constitutional scholars continue debating the \"counter-majoritarian difficulty\": how can judicial review—whereby unelected judges overturn legislation passed by democratic representatives—be reconciled with popular sovereignty? Some argue courts protect minority rights against tyrannical majorities; others contend this reasoning masks ideological preferences in neutral-sounding jurisprudence. The tension, perhaps, is irresolvable; democratic systems must balance competing values rather than optimize for any single principle.
+        </p>
+      </div>
+    
+      <div class="blur-overlay" id="start-overlay">
+        <button id="start-btn" class="start-btn">Start Typing Test</button>
+        <p class="overlay-text">Or click the text and start typing</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
