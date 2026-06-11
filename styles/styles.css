@@ -110,7 +110,7 @@ body {
 
 .content {
   line-height: 1.9;
-  color: hsl(0, 0%, 100%);
+  color: hsl(240, 3%, 46%);
   font-size: 1.5rem;
   font-weight: 400; 
 }
@@ -122,7 +122,7 @@ body {
   display: flex;
   justify-content: center;
   width: 95%;
-  height: 800px;
+  height: 600px;
 }
 
 .blur-overlay {
@@ -161,4 +161,19 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+.char.active {
+  background-color: hsl(0, 0%, 15%);
+  color: hsl(240, 3%, 46%);
+  border-radius: 3px;
+}
+
+.char.correct {
+  color: hsl(130, 50%, 50%);
+}
+
+.char.wrong {
+  color: hsl(0, 50%, 50%);
+  text-decoration: underline;
 }
