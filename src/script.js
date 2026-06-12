@@ -29,6 +29,33 @@ function toggleTypingContainer(){
 }
 
 
+let typingData = {};
+
+// 1. Create an async function
+async function initializeApp() {
+  try {
+    // 2. Await pauses the code until the delivery person gets back
+    const response = await fetch('data.json');
+    
+    // 3. Await pauses again until the data is unpacked
+    typingData = await response.json();
+    
+    // 4. Now that typingData is fully loaded, click the button!
+    document.getElementById("hard-btn").click();
+    
+  } catch (error) {
+    // try/catch blocks are best practice for async code to catch typos or missing files
+    console.error("Failed to load data:", error); 
+  }
+}
+
+// 5. Run the function to kick everything off
+initializeApp();
+
+function updatecontent(type){
+  if (!typingData[type]) return;
+  contentPara.innerText = typingData[type][Math.floor(Math.random() * typingData[type].length)].text;
+}
 
 function displayResult(){
   toggleTypingContainer();
@@ -97,11 +124,19 @@ buttons.forEach(btn => {
   btn.addEventListener("click", (event) => {
     const clickedBtn = event.currentTarget;
     const parent = clickedBtn.parentElement;
-
     parent.querySelectorAll("button").forEach(b => {
       b.classList.remove("blue-selected");
     });
     clickedBtn.classList.add("blue-selected");
+    if(clickedBtn.innerText=="Easy"){
+      updatecontent("easy");
+    }
+    else if(clickedBtn.innerText=="Medium"){
+      updatecontent("medium");
+    }
+    else if(clickedBtn.innerText=="Hard"){
+      updatecontent("hard");
+    }
   });
 });
 
@@ -164,3 +199,4 @@ restartBTN.addEventListener("click", ()=>{
 });
 
 
+document.getElementById("hard-btn").click();
