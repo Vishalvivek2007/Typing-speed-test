@@ -24,7 +24,7 @@
     <div class="header-right">
       <img src="assets/images/logo-large.svg" >
     </div>
-    <div class="header-left"><img src="assets/images/icon-personal-best.svg"> Personal best: <p class="personal-best">0 WPM</p></div>
+    <div class="header-left"><img src="assets/images/icon-personal-best.svg"> Personal best: <p class="personal-best">0</p><p class="personal-best">WPM</p></div>
   </div>
 
   <div class="typing-container">
@@ -65,6 +65,29 @@
         <p class="overlay-text">Or click the text and start typing</p>
       </div>
     </div>
+  </div>
+
+  <div class="Results">
+    <div class ="results-banner">
+      <img src="assets/images/icon-completed.svg">
+      <h1>Test Complete!</h1>
+      <p>Solid run. Keep pushing to beat your high score.</p>
+    </div>
+    <div class="final-stats">
+      <div>
+        <p>WPM: </p>
+        <p class="final-wpm"></p>
+      </div>
+      <div>
+        <p>Accuracy: </p>
+        <p class="final-accuracy"></p>
+      </div>
+      <div>
+        <p>Characters: </p>
+        <p><span class="correct-characters"></span>/<span class="wrong-characters"></span></p>
+      </div>
+    </div>
+    <button id="restart-btn" class="restart-btn">Beat This Score</button>
   </div>
 </body>
 </html>
